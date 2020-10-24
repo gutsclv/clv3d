@@ -1,0 +1,353 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>CLV3D</title>
+  <meta name="description" content="CLV3D">
+  <meta name="author" content="CLV3D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.png" type="image">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="site">
+
+<!-- Modal -->
+<div class="modal fade" id="metamaskModal" tabindex="-1" role="dialog" aria-labelledby="metamask" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close text-muted" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="font-size:3em;font-weight: 300;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/metamask.png" height="90em" style="margin: auto;">
+        <h4 class="card-title text-center pt-4">Looks like you aren’t signed into a metamask wallet.</h4>
+        <p class="pt-3">CLV3D is dapp for the Ethereum blockchain. 
+          To use this site, you need to sign in through a browser 
+          wallet like Metamask.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Get Metamask</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-labelledby="faqModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close text-muted" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="font-size:3em;font-weight: 300;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center" id="faq">
+        <h4 class="card-title text-center pt-4">CLV3D Info</h4>
+        <ul id="faq-list" class="wow fadeInUp">
+
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">Question 1</a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                Answer 1.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq2">Question 2</a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                 Answer 2.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Question 3</a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                 Answer 3.
+              </p>
+            </div>
+          </li>
+
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="topnav py-5" style="padding-bottom:0!important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card mb-lg-0 effect1">
+          <div class="card-body">
+            <nav class="navbar navbar-expand-lg navbar-light static-top">
+              <div class="container">
+                <h2 style="font-weight:700!important;padding-top:.2em;padding-left:.4em;"><img src="img/logo.png" height="40em" style="margin-top:-.18em">&nbsp;&nbsp;CLV3D</h2>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <div id="nav-icon4" style="zoom: 0.5;-moz-transform: scale(0.5);">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="https://etherscan.io/address/0xd7e09f594855e7dd89dce2747d7b6953b2ea474c">Contract</a>
+                    </li>
+					<li class="nav-item active">
+                      <a class="nav-link" href="https://medium.com/@clvfi/announcing-clover3d-39439cf595d2">About</a>
+                    </li>
+                    <!--<li class="nav-item">
+                      <a class="nav-link"  style="padding-bottom:1em!important;" data-toggle="modal" data-target="#faqModal">Info</a>
+                    </li>-->
+					<li class="nav-item mx-3">
+					  <a href="https://clv2d.surge.sh" class="btn btn-block btn-primary" target="blank" style="background: linear-gradient(0deg, rgba(5,106,135,1) 0%, rgba(18,168,219,1) 100%);border: 1px solid #12a8db!important;">CLV2D</a>
+					</li>					
+                    <li class="nav-item mx-3">
+                      <a href="https://app.uniswap.org/#/add/0x22222c03318440305ac3e8a7820563d6a9fd777f/ETH" class="btn btn-block btn-primary" target="blank" style="box-shadow: inset 0 0 0 100px rgba(28,207,110,.3), 0 14px 14px -15px #002d1f;">Get LP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://app.uniswap.org/#/swap?outputCurrency=0x22222C03318440305aC3e8a7820563d6A9FD777F" class="btn btn-block btn-primary" target="blank">Get CLV</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats my-4 pt-2">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="card mb-2 effect1">
+          <div class="card-body text-center pb-0">
+            <h5 class="card-title text-center" style="font-weight: 700;">Contract Balance</h5>
+            <hr>
+            <h5 class="text-center mb-0 pt-2" style="font-weight: 500;" id="contractBalance">--</h5><br>
+            <h5 class="text-center mb-0" style="font-weight: 500;">CLV-ETH LP</h5>
+            <!--<p style="margin-bottom: 20px;">(160.4768 ETH | $50,713 USD)</p>
+            <h6 class="text-center py-2" style="background-color: rgba(255,255,255,.1); border-radius: .5em;" >Current APY: <span style="color: #14d97e" id="currentAPY">56,984%</span></h6>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card mb-2 mb-lg-0 effect1">
+          <div class="card-body text-center mb-0">
+            <h5 class="card-title text-center" style="font-weight: 700;">Price</h5>
+            <hr>
+            <div class="pt-2" style="padding-top: 0px;">
+              <h6 style="font-weight: 500;" class="d-inline">BUY: </h6><h6 class="text-center d-inline"><span id="buyPrice" style="color: #14d97e;font-weight: 700;">--</span> CLV-ETH LP / C3D</h6><br><br>
+              <!--<p style="margin-bottom: 18px;">(0.4768 ETH | $190.35 USD)</p>-->
+              <h6 style="font-weight: 500;" class="d-inline">SELL: </h6><h6 class="text-center d-inline"><span id="sellPrice" style="color: #14d97e;font-weight: 700;">--</span> CLV-ETH LP / C3D</h6>
+              <!--<p class="mb-0">(0.4068 ETH | $170.35 USD)</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col-lg-4">
+        <div class="card mb-2 mb-lg-0 effect1">
+          <div class="card-body text-center exchange">
+            <h5 class="card-title text-center" style="font-weight: 700;">Your Dividends</h5>
+            <hr>
+            <h6 class="text-center d-inline" style="font-weight: 700;"><span id="userDividends">--</span> CLV-ETH LP</h6>
+            <!--<p class="mb-1">(1.4768 ETH | $513.12 USD)</p>-->
+            <div class="mt-0 row" style="padding-top:14px">
+            <a  class=" py-2 btn btn-block d-inline mt-0" style="width: 45%" id="withdraw">withdraw</a>
+            <a  class=" py-2 btn btn-block d-inline mt-0" style="width: 45%" id="reinvest">Reinvest</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats my-4 pt-2">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="card mb-2 effect1">
+          <div class="card-body text-center pb-0">
+            <h5 class="card-title text-center" style="font-weight: 700;">Total C3D Supply</h5>
+            <hr>
+            <h5 class="text-center mb-0 pt-2" style="font-weight: 500;" id="totalTokenSupply">--</h5><br>
+            <h5 class="text-center mb-0" style="font-weight: 500;">C3D</h5>
+            <!--<p style="margin-bottom: 20px;">(160.4768 ETH | $50,713 USD)</p>
+            <h6 class="text-center py-2" style="background-color: rgba(255,255,255,.1); border-radius: .5em;" >Current APY: <span style="color: #14d97e" id="currentAPY">56,984%</span></h6>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card mb-2 effect1">
+          <div class="card-body text-center pb-0">
+            <h5 class="card-title text-center" style="font-weight: 700;">Your C3D + Div Value</h5>
+            <hr>
+            <h5 class="text-center mb-0 pt-2" style="font-weight: 500;" id="userLiquidValue">--</h5><br>
+            <h5 class="text-center mb-0" style="font-weight: 500;">CLV-ETH LP</h5>
+            <!--<p style="margin-bottom: 20px;">(160.4768 ETH | $50,713 USD)</p>
+            <h6 class="text-center py-2" style="background-color: rgba(255,255,255,.1); border-radius: .5em;" >Current APY: <span style="color: #14d97e" id="currentAPY">56,984%</span></h6>-->
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col-lg-4">
+        <div class="card mb-2 effect1">
+          <div class="card-body text-center pb-0">
+            <h5 class="card-title text-center" style="font-weight: 700;">Percent of LP in C3D</h5>
+            <hr>
+            <h5 class="text-center mb-0 pt-2" style="font-weight: 500;" ><span id="contractBalancePercent">--</span>%</h5><br>
+            <h5 class="text-center mb-0" style="font-weight: 500;">CLV-ETH LP</h5>
+            <!--<p style="margin-bottom: 20px;">(160.4768 ETH | $50,713 USD)</p>
+            <h6 class="text-center py-2" style="background-color: rgba(255,255,255,.1); border-radius: .5em;" >Current APY: <span style="color: #14d97e" id="currentAPY">56,984%</span></h6>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exchange pb-4">
+  <div class="container">
+    <div class="row mb-4">
+
+      <div class="col-lg-6">
+        <div class="card mb-4 mb-lg-0 effect1">
+          <div class="card-body">
+            <h5 class="card-title text-left" style="font-weight: 700">Swap CLV-ETH LP to C3D (4% fee)</h5>
+            <hr>
+            <div class="buy" style="margin-top: 30px;">
+              
+              <ul class="fa-ul text-left" style="margin-bottom: 20px">
+                <li style="font-weight: 300">Your CLV-ETH LP balance: <span style=" font-weight: 500" id="userUNI">--</span></li>
+              </ul>
+              <form class="form" style="position: relative; z-index: 1!important;margin-top: 5px;" id="before-list" onsubmit="return false;">
+                <div class="input-group" style="position: relative;">
+                  <input type="number" pattern="[0-9]" id="buyAmount" placeholder="CLV-ETH LP to Swap">
+                  <div class="input-group-append" style="position: absolute; top: 0px; right: 0px; width: 80px; z-index: 5;">
+                    <button class="btn2 btn-primary" type="button" id="setMaxBuy">MAX</button>
+                  </div>
+                </div>
+              </form>
+              <a  class="btn btn-block btn-primary" id="approve">Approve</a>
+              <a  class="btn btn-block btn-primary" id="buy">Swap to C3D</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card mb-4 mb-lg-0 effect1">
+          <div class="card-body">
+            <h5 class="card-title text-left" style="font-weight: 700">Swap C3D to CLV-ETH LP (4% fee)</h5>
+            <hr>
+            <div class="sell" style="margin-top: 30px">
+                <ul class="fa-ul text-left" style="margin-bottom: 20px">
+                  <li style="font-weight: 300">Your C3D balance: <span style="font-weight: 500" id="userBalance">--</span></li>
+                </ul>
+              <form class="form" style="position: relative; z-index: 1!important;margin-top: 5px;" id="before-list" onsubmit="return false;">
+                <div class="input-group" style="position: relative;">
+                  <input type="number" pattern="[0-9]" placeholder="C3D to Swap"  id="sellAmount">
+                  <div class="input-group-append" style="position: absolute; top: 0px; right: 0px; width: 80px; z-index: 5;">
+                    <button class="btn2 btn-primary" type="button" id="setMaxSell" >MAX</button>
+                  </div>
+                </div>
+              </form>
+              <a  class="btn btn-block btn-secondary"  id="sell">Swap to CLV-ETH LP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+
+    </div>
+
+    <div class="row mb-4 pt-2">
+      <div class="col-lg-12">
+        <div class="card mb-lg-0 effect1">
+          <div class="card-body">
+            <h5 class="card-title text-left" style="font-weight: 700">How it Works</h5><br>
+            <p>
+              <b>CLV3D is a pool for CLV liquidity provider to earn an additional layer of rewards for providing liquidity.</b>
+              <br><br>
+              When you deposit CLV-ETH LP tokens to the CLV3D contract, C3D tokens are minted and added to your balance.
+              <br><br>
+              The value of C3D tokens fluctuates based on the amount of CLV-ETH in the CLV3D contract.
+              <br><br>
+              There is a 4% entrance and exit fee when you swap CLV-ETH LP tokens for C3D tokens.
+              <br><br>
+              100% of the entrance/exit fees are paid as dividends to C3D holders.
+              <br><br>
+              This pool is designed to operate like an interest bearing account where participants can freely join and leave and long term C3D holders will be rewarded from the activity of others.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-2">
+      <div class="col-12 footer">
+        <div class="card mb-lg-0 effect1 w-100">
+          <div class="card-body text-center w-100">
+            <p class="p-0 m-0">Trust the plan.</p>
+          </div>
+        </div>
+      </div>
+    </row>
+
+  </div>
+</section>
+
+
+
+
+</div>
+    <script src="../js/web3.js"></script>
+    <script src="../js/main.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#nav-icon4').click(function(){
+          $(this).toggleClass('open');
+        });
+      });
+    </script>
+
+
+</body>
+</html>
