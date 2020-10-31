@@ -626,7 +626,7 @@ function init() {
             : '0x0000000000000000000000000000000000000001';
         FNB.allInfoFor.call(account, function(error, info) {
             if (!error) {
-                var balance = parseFloat(web3.fromWei(info[7], 'wei').toFixed(2));
+                var balance = parseFloat(web3.fromWei(info[7]).toFixed(9));
             }else {
                 console.log(error);
             }
